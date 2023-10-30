@@ -21,6 +21,17 @@ async function searchTeam(team) {
   return allTeams.filter(({ name }) => name === team);
 }
 
+async function postData(data) {
+  return await fetch("http://127.0.0.1:3000/teams", {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => data);
+}
+
 function displayTeamDetails(teamData) {
   teamData.forEach((team) => {
     const teamCard = document.createElement("div");
@@ -38,10 +49,44 @@ function displayTeamDetails(teamData) {
     const location = document.createElement("p");
     location.textContent = `Stadium: ${team.stadium} | ${team.capacity}}`;
 
+    const likeContainer = document.createElement("div");
+
+    const like = document.createElement("button");
+    like.classList.add("like-button");
+    like.textContent = `Like: ${team.dislikes}`;
+    like.addEventListener("click", async () => {
+      let _allTeams = await fetchFootballData();
+      _allTeams.forEach(async (_team) => {
+        if (_team.name === team.name) {
+          console.log(_team);
+          let count = _team.likes += 1;
+          like.textContent = `Like(s): ${count}`;
+        }
+      });
+    });
+
+    const dislike = document.createElement("button");
+    dislike.classList.add("dislike-button");
+    dislike.textContent = `DisLike: ${team.dislikes}`;
+    dislike.addEventListener("click", async () => {
+      let _allTeams = await fetchFootballData();
+      _allTeams.forEach((_team) => {
+        if (_team.name === team.name) {
+          console.log(_team);
+          _team.dislikes += 1;
+          dislike.textContent = `DisLike(s): ${(_team.dislikes += 1)}`;
+        }
+      });
+    });
+
+    likeContainer.appendChild(like);
+    likeContainer.appendChild(dislike);
+
     teamCard.appendChild(clubName);
     teamCard.appendChild(yearFounded);
     teamCard.appendChild(trophiesWon);
     teamCard.appendChild(location);
+    teamCard.appendChild(likeContainer);
 
     teamDetailsContainer.appendChild(teamCard);
   });
@@ -66,10 +111,12 @@ searchInput.addEventListener("input", async (e) => {
 
   let allTeams = await fetchFootballData();
 
-  let filtered = allTeams.filter((team) => team ? team.name.toLowerCase().startsWith(String(e.target.value))==true: '')
+  let filtered = allTeams.filter((team) =>
+    team
+      ? team.name.toLowerCase().startsWith(String(e.target.value)) == true
+      : ""
+  );
   teamDetailsContainer.textContent = "";
 
   displayTeamDetails(filtered);
-
-
 });

@@ -8,7 +8,9 @@
       "country": "England",
       "capacity": 60704,
       "address": "Hornsey Rd, London N7 7AJ, UK",
-      "stadium": "Emirates Stadium"
+      "stadium": "Emirates Stadium",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Aston Villa",
@@ -18,7 +20,9 @@
       "country": "England",
       "capacity": 42788,
       "address": "Trinity Rd, Birmingham B6 6HE, UK",
-      "stadium": "Villa Park"
+      "stadium": "Villa Park",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Brentford",
@@ -28,7 +32,9 @@
       "country": "England",
       "capacity": 17350,
       "address": "Braemar Rd, Brentford TW8 0NT, UK",
-      "stadium": "Brentford Community Stadium"
+      "stadium": "Brentford Community Stadium",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Brighton & Hove Albion",
@@ -38,7 +44,9 @@
       "country": "England",
       "capacity": 30817,
       "address": "Village Way, Brighton BN1 9BL, UK",
-      "stadium": "Falmer Stadium (Amex)"
+      "stadium": "Falmer Stadium (Amex)",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Burnley",
@@ -48,7 +56,9 @@
       "country": "England",
       "capacity": 21401,
       "address": "Harry Potts Way, Burnley BB10 4BX, UK",
-      "stadium": "Turf Moor"
+      "stadium": "Turf Moor",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Chelsea",
@@ -58,7 +68,9 @@
       "country": "England",
       "capacity": 40834,
       "address": "Fulham Rd, Fulham, London SW6 1HS, UK",
-      "stadium": "Stamford Bridge"
+      "stadium": "Stamford Bridge",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Crystal Palace",
@@ -68,7 +80,9 @@
       "country": "England",
       "capacity": 25486,
       "address": "Whitehorse Ln, London SE25 6PU, UK",
-      "stadium": "Selhurst Park"
+      "stadium": "Selhurst Park",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Everton",
@@ -78,7 +92,9 @@
       "country": "England",
       "capacity": 39214,
       "address": "Goodison Rd, Liverpool L4 4EL, UK",
-      "stadium": "Goodison Park"
+      "stadium": "Goodison Park",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Leeds United",
@@ -88,7 +104,9 @@
       "country": "England",
       "capacity": 37961,
       "address": "Elland Rd, Leeds LS11 0ES, UK",
-      "stadium": "Elland Road"
+      "stadium": "Elland Road",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Leicester City",
@@ -98,7 +116,9 @@
       "country": "England",
       "capacity": 32312,
       "address": "Filbert Way, Leicester LE2 7FL, UK",
-      "stadium": "King Power Stadium"
+      "stadium": "King Power Stadium",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Liverpool",
@@ -108,7 +128,9 @@
       "country": "England",
       "capacity": 53394,
       "address": "Anfield Rd, Liverpool L4 0TH, UK",
-      "stadium": "Anfield"
+      "stadium": "Anfield",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Manchester City",
@@ -118,7 +140,9 @@
       "country": "England",
       "capacity": 55097,
       "address": "Etihad Campus, Manchester M11 3FF, UK",
-      "stadium": "Etihad Stadium"
+      "stadium": "Etihad Stadium",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Manchester United",
@@ -128,7 +152,9 @@
       "country": "England",
       "capacity": 74879,
       "address": "Sir Matt Busby Way, Old Trafford, Stretford, Manchester M16 0RA, UK",
-      "stadium": "Old Trafford"
+      "stadium": "Old Trafford",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Newcastle United",
@@ -138,7 +164,9 @@
       "country": "England",
       "capacity": 52389,
       "address": "Strawberry Pl, Newcastle upon Tyne NE1 4ST, UK",
-      "stadium": "St James' Park"
+      "stadium": "St James' Park",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Norwich City",
@@ -148,7 +176,9 @@
       "country": "England",
       "capacity": 27244,
       "address": "Carrow Rd, Norwich NR1 1JE, UK",
-      "stadium": "Carrow Road"
+      "stadium": "Carrow Road",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Southampton",
@@ -158,7 +188,9 @@
       "country": "England",
       "capacity": 32505,
       "address": "Britannia Rd, Southampton SO14 5FP, UK",
-      "stadium": "St Mary's Stadium"
+      "stadium": "St Mary's Stadium",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Tottenham Hotspur",
@@ -168,7 +200,9 @@
       "country": "England",
       "capacity": 62062,
       "address": "782 High Rd, Tottenham, London N17 0BX, UK",
-      "stadium": "Tottenham Hotspur Stadium"
+      "stadium": "Tottenham Hotspur Stadium",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Watford",
@@ -178,7 +212,9 @@
       "country": "England",
       "capacity": 22200,
       "address": "Vicarage Rd, Watford WD18 0ER, UK",
-      "stadium": "Vicarage Road"
+      "stadium": "Vicarage Road",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "West Ham United",
@@ -188,7 +224,9 @@
       "country": "England",
       "capacity": 60000,
       "address": "London Stadium, Queen Elizabeth Olympic Park, London E20 2ST, UK",
-      "stadium": "London Stadium"
+      "stadium": "London Stadium",
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "name": "Wolverhampton Wanderers",
@@ -198,7 +236,9 @@
       "country": "England",
       "capacity": 32050,
       "address": "Waterloo Rd, Wolverhampton WV1 4QR, UK",
-      "stadium": "Molineux Stadium"
+      "stadium": "Molineux Stadium,",
+      "likes": 0,
+      "dislikes": 0
     }
   ]
 }

@@ -69,7 +69,7 @@ header {
     cursor: pointer;
 }
 
-#like-button, #dislike-button {
+.like-button, .dislike-button {
     background-color: #007bff;
     color: #fff;
     padding: 5px 10px;
@@ -78,7 +78,7 @@ header {
     cursor: pointer;
 }
 
-#like-button:hover, #dislike-button:hover {
+.like-button:hover, .dislike-button:hover {
     background-color: #0056b3;
 }
 
