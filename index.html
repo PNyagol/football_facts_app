@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Football Facts</title>
+</head>
+<body>
+    <header>
+        <h1>Football Facts</h1>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search team">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+    <div id="teams-container">
+    
+    </div>
+
+ 
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+         
+            <button id="like-button">Like</button>
+            <button id="dislike-button">Dislike</button>
+            <input type="text" id="comment-input" placeholder="Add a comment">
+            <button id="comment-button">Submit</button>
+            <div id="comments-container">
+     
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
