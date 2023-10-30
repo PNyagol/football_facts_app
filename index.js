@@ -1,6 +1,16 @@
 const teamDetailsContainer = document.querySelector("#teams-container");
 let searchBtn = document.querySelector("#search-button");
 let searchInput = document.querySelector("#search-input");
+let closeBtn = document.querySelector(".close");
+let modal = document.querySelector(".modal");
+let likeBtn = document.querySelector("#like-button");
+let dislikeBtn = document.querySelector("#dislike-button");
+
+let modalContent = document.querySelector(".modal-content");
+
+const teamData = fetchFootballData();
+
+const url = "http://127.0.0.1:3000/teams";
 
 async function fetchFootballData() {
   const url = "http://127.0.0.1:3000/teams";
@@ -36,6 +46,36 @@ function displayTeamDetails(teamData) {
   teamData.forEach((team) => {
     const teamCard = document.createElement("div");
     teamCard.classList.add("team-card");
+    teamCard.addEventListener("click", () => {
+      modal.style.display = "block";
+
+      let name = team.name;
+
+      let header = document.createElement("h2");
+      header.classList.add("h2");
+
+      header.textContent = "";
+      header.textContent = team.name;
+
+      let modalTeam = teamData.filter(({ name }) => name === team.name);
+
+      let dt = modalTeam[0];
+
+      console.log(dt);
+
+      modalContent.prepend(header);
+
+      likeBtn.addEventListener("click", async () => {
+        likeBtn.textContent = `Like ${modalTeam[0].likes + 1}`;
+        let postReq = await fetch(`http://127.0.0.1:3000/teams`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dt),
+        }).then((response) => response.json());
+
+        console.log(postReq);
+      });
+    });
 
     const clubName = document.createElement("h2");
     clubName.textContent = team.name;
@@ -51,42 +91,10 @@ function displayTeamDetails(teamData) {
 
     const likeContainer = document.createElement("div");
 
-    const like = document.createElement("button");
-    like.classList.add("like-button");
-    like.textContent = `Like: ${team.dislikes}`;
-    like.addEventListener("click", async () => {
-      let _allTeams = await fetchFootballData();
-      _allTeams.forEach(async (_team) => {
-        if (_team.name === team.name) {
-          console.log(_team);
-          let count = _team.likes += 1;
-          like.textContent = `Like(s): ${count}`;
-        }
-      });
-    });
-
-    const dislike = document.createElement("button");
-    dislike.classList.add("dislike-button");
-    dislike.textContent = `DisLike: ${team.dislikes}`;
-    dislike.addEventListener("click", async () => {
-      let _allTeams = await fetchFootballData();
-      _allTeams.forEach((_team) => {
-        if (_team.name === team.name) {
-          console.log(_team);
-          _team.dislikes += 1;
-          dislike.textContent = `DisLike(s): ${(_team.dislikes += 1)}`;
-        }
-      });
-    });
-
-    likeContainer.appendChild(like);
-    likeContainer.appendChild(dislike);
-
     teamCard.appendChild(clubName);
     teamCard.appendChild(yearFounded);
     teamCard.appendChild(trophiesWon);
     teamCard.appendChild(location);
-    teamCard.appendChild(likeContainer);
 
     teamDetailsContainer.appendChild(teamCard);
   });
@@ -119,4 +127,10 @@ searchInput.addEventListener("input", async (e) => {
   teamDetailsContainer.textContent = "";
 
   displayTeamDetails(filtered);
+});
+
+closeBtn.addEventListener("click", () => {
+  let h2 = document.querySelector(".modal-content h2");
+  modal.style.display = "none";
+  h2.textContent = "";
 });
