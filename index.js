@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     function fetchFootballData(teamName) {
         const apiKey = 'f99ef6c7f4mshbcacdbbf20a09fdp1e50b8jsnd2b567586440';
-        const apiUrl = `https://api-football-beta.p.rapidapi.com/teams?search=`;
+        const apiUrl = `https://api-football-beta.p.rapidapi.com/teams`;
 
-        fetch(apiUrl, {
+        let teams = fetch(apiUrl, {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com',
@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             displayTeamDetails(teamData);
         })
         .catch(error => console.error('Error fetching data:', error));
+
+        return teams
     }
 
     function displayTeamDetails(teamData) {
