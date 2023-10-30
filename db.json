@@ -1,0 +1,204 @@
+{
+  "teams": [
+    {
+      "name": "Arsenal",
+      "founded": 1886,
+      "venue": "Emirates Stadium",
+      "city": "London",
+      "country": "England",
+      "capacity": 60704,
+      "address": "Hornsey Rd, London N7 7AJ, UK",
+      "stadium": "Emirates Stadium"
+    },
+    {
+      "name": "Aston Villa",
+      "founded": 1874,
+      "venue": "Villa Park",
+      "city": "Birmingham",
+      "country": "England",
+      "capacity": 42788,
+      "address": "Trinity Rd, Birmingham B6 6HE, UK",
+      "stadium": "Villa Park"
+    },
+    {
+      "name": "Brentford",
+      "founded": 1889,
+      "venue": "Brentford Community Stadium",
+      "city": "London",
+      "country": "England",
+      "capacity": 17350,
+      "address": "Braemar Rd, Brentford TW8 0NT, UK",
+      "stadium": "Brentford Community Stadium"
+    },
+    {
+      "name": "Brighton & Hove Albion",
+      "founded": 1901,
+      "venue": "Falmer Stadium (Amex)",
+      "city": "Brighton",
+      "country": "England",
+      "capacity": 30817,
+      "address": "Village Way, Brighton BN1 9BL, UK",
+      "stadium": "Falmer Stadium (Amex)"
+    },
+    {
+      "name": "Burnley",
+      "founded": 1882,
+      "venue": "Turf Moor",
+      "city": "Burnley",
+      "country": "England",
+      "capacity": 21401,
+      "address": "Harry Potts Way, Burnley BB10 4BX, UK",
+      "stadium": "Turf Moor"
+    },
+    {
+      "name": "Chelsea",
+      "founded": 1905,
+      "venue": "Stamford Bridge",
+      "city": "London",
+      "country": "England",
+      "capacity": 40834,
+      "address": "Fulham Rd, Fulham, London SW6 1HS, UK",
+      "stadium": "Stamford Bridge"
+    },
+    {
+      "name": "Crystal Palace",
+      "founded": 1905,
+      "venue": "Selhurst Park",
+      "city": "London",
+      "country": "England",
+      "capacity": 25486,
+      "address": "Whitehorse Ln, London SE25 6PU, UK",
+      "stadium": "Selhurst Park"
+    },
+    {
+      "name": "Everton",
+      "founded": 1878,
+      "venue": "Goodison Park",
+      "city": "Liverpool",
+      "country": "England",
+      "capacity": 39214,
+      "address": "Goodison Rd, Liverpool L4 4EL, UK",
+      "stadium": "Goodison Park"
+    },
+    {
+      "name": "Leeds United",
+      "founded": 1919,
+      "venue": "Elland Road",
+      "city": "Leeds",
+      "country": "England",
+      "capacity": 37961,
+      "address": "Elland Rd, Leeds LS11 0ES, UK",
+      "stadium": "Elland Road"
+    },
+    {
+      "name": "Leicester City",
+      "founded": 1884,
+      "venue": "King Power Stadium",
+      "city": "Leicester",
+      "country": "England",
+      "capacity": 32312,
+      "address": "Filbert Way, Leicester LE2 7FL, UK",
+      "stadium": "King Power Stadium"
+    },
+    {
+      "name": "Liverpool",
+      "founded": 1892,
+      "venue": "Anfield",
+      "city": "Liverpool",
+      "country": "England",
+      "capacity": 53394,
+      "address": "Anfield Rd, Liverpool L4 0TH, UK",
+      "stadium": "Anfield"
+    },
+    {
+      "name": "Manchester City",
+      "founded": 1880,
+      "venue": "Etihad Stadium",
+      "city": "Manchester",
+      "country": "England",
+      "capacity": 55097,
+      "address": "Etihad Campus, Manchester M11 3FF, UK",
+      "stadium": "Etihad Stadium"
+    },
+    {
+      "name": "Manchester United",
+      "founded": 1878,
+      "venue": "Old Trafford",
+      "city": "Manchester",
+      "country": "England",
+      "capacity": 74879,
+      "address": "Sir Matt Busby Way, Old Trafford, Stretford, Manchester M16 0RA, UK",
+      "stadium": "Old Trafford"
+    },
+    {
+      "name": "Newcastle United",
+      "founded": 1892,
+      "venue": "St James' Park",
+      "city": "Newcastle upon Tyne",
+      "country": "England",
+      "capacity": 52389,
+      "address": "Strawberry Pl, Newcastle upon Tyne NE1 4ST, UK",
+      "stadium": "St James' Park"
+    },
+    {
+      "name": "Norwich City",
+      "founded": 1902,
+      "venue": "Carrow Road",
+      "city": "Norwich",
+      "country": "England",
+      "capacity": 27244,
+      "address": "Carrow Rd, Norwich NR1 1JE, UK",
+      "stadium": "Carrow Road"
+    },
+    {
+      "name": "Southampton",
+      "founded": 1885,
+      "venue": "St Mary's Stadium",
+      "city": "Southampton",
+      "country": "England",
+      "capacity": 32505,
+      "address": "Britannia Rd, Southampton SO14 5FP, UK",
+      "stadium": "St Mary's Stadium"
+    },
+    {
+      "name": "Tottenham Hotspur",
+      "founded": 1882,
+      "venue": "Tottenham Hotspur Stadium",
+      "city": "London",
+      "country": "England",
+      "capacity": 62062,
+      "address": "782 High Rd, Tottenham, London N17 0BX, UK",
+      "stadium": "Tottenham Hotspur Stadium"
+    },
+    {
+      "name": "Watford",
+      "founded": 1881,
+      "venue": "Vicarage Road",
+      "city": "Watford",
+      "country": "England",
+      "capacity": 22200,
+      "address": "Vicarage Rd, Watford WD18 0ER, UK",
+      "stadium": "Vicarage Road"
+    },
+    {
+      "name": "West Ham United",
+      "founded": 1895,
+      "venue": "London Stadium",
+      "city": "London",
+      "country": "England",
+      "capacity": 60000,
+      "address": "London Stadium, Queen Elizabeth Olympic Park, London E20 2ST, UK",
+      "stadium": "London Stadium"
+    },
+    {
+      "name": "Wolverhampton Wanderers",
+      "founded": 1877,
+      "venue": "Molineux Stadium",
+      "city": "Wolverhampton",
+      "country": "England",
+      "capacity": 32050,
+      "address": "Waterloo Rd, Wolverhampton WV1 4QR, UK",
+      "stadium": "Molineux Stadium"
+    }
+  ]
+}

@@ -1,57 +1,75 @@
-document.addEventListener('DOMContentLoaded', () => {
-    function fetchFootballData(teamName) {
-        const apiKey = 'f99ef6c7f4mshbcacdbbf20a09fdp1e50b8jsnd2b567586440';
-        const apiUrl = `https://api-football-beta.p.rapidapi.com/teams`;
+const teamDetailsContainer = document.querySelector("#teams-container");
+let searchBtn = document.querySelector("#search-button");
+let searchInput = document.querySelector("#search-input");
 
-        let teams = fetch(apiUrl, {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com',
-                'X-RapidAPI-Key': apiKey,
-            },
-        })
-        .then(response => response.json())
-        .then(data => {
-            const teamData = data.response;
-            displayTeamDetails(teamData);
-        })
-        .catch(error => console.error('Error fetching data:', error));
+async function fetchFootballData() {
+  const url = "http://127.0.0.1:3000/teams";
+  const options = {
+    method: "GET",
+  };
 
-        return teams
-    }
+  let teams = await fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => data);
 
-    function displayTeamDetails(teamData) {
-    
-    
-        const teamDetailsContainer = document.getElementById('team-details-container');
-        teamDetailsContainer.innerHTML = '';
-    
-        teamData.forEach(team => {
-            const teamCard = document.createElement('div');
-            teamCard.classList.add('team-card');
+  return teams;
+}
 
-            const clubName = document.createElement('h2');
-            clubName.textContent = team.name;
-    
-            const yearFounded = document.createElement('p');
-            yearFounded.textContent = `Year Founded: ${team.founded}`;
-    
-            const trophiesWon = document.createElement('p');
-            trophiesWon.textContent = `Trophies Won: ${team.trophies}`;
-    
-            const location = document.createElement('p');
-            location.textContent = `Location: ${team.country}, ${team.city}`;
-    
+async function searchTeam(team) {
+  let allTeams = await fetchFootballData();
 
-            teamCard.appendChild(clubName);
-            teamCard.appendChild(yearFounded);
-            teamCard.appendChild(trophiesWon);
-            teamCard.appendChild(location);
+  return allTeams.filter(({ name }) => name === team);
+}
 
-            teamDetailsContainer.appendChild(teamCard);
-        });
-    }
-    
+function displayTeamDetails(teamData) {
+  teamData.forEach((team) => {
+    const teamCard = document.createElement("div");
+    teamCard.classList.add("team-card");
+
+    const clubName = document.createElement("h2");
+    clubName.textContent = team.name;
+
+    const yearFounded = document.createElement("p");
+    yearFounded.textContent = `Year Founded: ${team.founded}`;
+
+    const trophiesWon = document.createElement("p");
+    trophiesWon.textContent = `Address: ${team.address}`;
+
+    const location = document.createElement("p");
+    location.textContent = `Stadium: ${team.stadium} | ${team.capacity}}`;
+
+    teamCard.appendChild(clubName);
+    teamCard.appendChild(yearFounded);
+    teamCard.appendChild(trophiesWon);
+    teamCard.appendChild(location);
+
+    teamDetailsContainer.appendChild(teamCard);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  let response = await fetchFootballData();
+
+  displayTeamDetails(response);
+});
+
+searchBtn.addEventListener("click", async () => {
+  let filtered = await searchTeam("Liverpool");
+
+  teamDetailsContainer.textContent = "";
+
+  displayTeamDetails(filtered);
+});
+
+searchInput.addEventListener("input", async (e) => {
+  console.log(e.target.value);
+
+  let allTeams = await fetchFootballData();
+
+  let filtered = allTeams.filter((team) => team ? team.name.toLowerCase().startsWith(String(e.target.value))==true: '')
+  teamDetailsContainer.textContent = "";
+
+  displayTeamDetails(filtered);
 
 
 });
